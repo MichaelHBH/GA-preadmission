@@ -1,0 +1,167 @@
+<!-- https://dash.generalassemb.ly/MicH/build-your-own-business-website
+photos lifted from http://experiencesake.com
+
+colors:
+light tan 	#ede1b1  rgba(237,225,177,1)
+brown       #cdb79e  rgba(205,183,158,1)
+off white   #fafad2  rgba(250,250,210,1)
+dark grey   #2e2e2e  rgba(46,46,46,1)
+red         #8b0000  rgba(139,0,0,1)
+-->
+<!DOCTYPE html>
+<head>
+ <link href="/normalize.css" rel="stylesheet">
+ <title>Komeshu Imports</title>
+ <script src="/assets/jquery.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Aclonica|Oswald" rel="stylesheet">
+ <style>
+   body {
+     font-family: 'Oswald', sans-serif;
+     margin: 0 auto;
+     max-width: 600px;
+     background: #fafad2;
+   }
+   div {
+     height: 335px;
+     background-size: cover;
+     position: relative;
+     margin: 40px 0 0 0;
+     border-radius: 12px;
+   }
+   h1 {
+     font-family: 'Aclonica', sans-serif;
+     text-align: center;
+     font-size: 75px;
+     color: #cdb79e;
+     margin: 60px 0 0 0;
+   }
+   h2 {
+     letter-spacing: 1px;
+     text-align: center;
+     color: #8b0000;
+     margin: 0px 0 70px 0;
+   }
+   ul {
+     padding: 5 10px;
+     text-align: center;
+   }
+   li {
+     border-left: 1px solid black;
+     border-right: 1px solid black;
+     display: inline;
+     padding: 0px 10px 0px 10px;
+   }
+   a:link {
+     color: rgb(139,0,0);
+     text-decoration: none;
+   }
+   a:visited {
+     color: rgb(139,0,0);
+     }
+   p {
+     color: rgba(46,46,46,1);
+     background: rgba(250,250,210,1);
+     background: linear-gradient(bottom, rgba(250,250,210,1), rgba(250,250,210,.4));
+     background: -webkit-linear-gradient(bottom, rgba(250,250,210,1), rgba(250,250,210,.4));
+     background: -moz-linear-gradient(bottom, rgba(250,250,210,1), rgba(250,250,210,.4));
+     padding: 10px;
+     line-height: 28px;
+     text-align: justify;
+     position: absolute;
+     bottom: 0;
+     margin: 0;
+     height: 30px;
+     transition: height 1s;
+     -webkit-transition: height 1s;
+     -moz-transition: height 1s;
+   }
+   small {
+     opacity: 0;
+   }
+   .show-description p {
+     height: 150px;
+   }
+   .show-description small {
+     opacity: 1;
+   }
+   .nama{
+     background-image: url("https://i.imgur.com/YRPUX6H.jpg");
+   }
+   .junmai{
+     background-image: url("https://i.imgur.com/yDyXfCu.jpg");
+   }
+   .umeshu{
+     background-image: url("https://i.imgur.com/iHwzoxH.jpg");
+   }
+   .price {
+     font-weight: 700;
+     float: right;
+   }
+   @media (max-width: 500px) {
+     h1 {
+       font-size: 50px;
+       margin-top: 20px;
+       line-height: 45px;
+     }
+     h2 {
+       font-size: 20px;
+       margin: 20px 0 30px 0;
+     }
+     li {
+       padding: 3px;
+       border-left: 0;
+       border-right: 0;
+     }
+     div {
+       height: 180px;
+       background-size: contain;
+       background-repeat: no-repeat;
+       margin: 30px 12px 0 12px;
+     }
+     p {
+       font-size: 20px;
+       line-height: 24px;
+     }
+     small {
+       font-size: 16px;
+     }
+   }
+ </style>
+</head>
+
+<body>
+<nav>
+ <ul>
+     <li><a class="nav" href="https://dash.generalassemb.ly/MicH/build-your-own-business-website">Home</a></li>
+     <li><a class="nav" href="#">Shop</a></li>
+     <li><a class="nav" href="#">Contact</a></li>
+     <li><a class="nav" href="#">My Account</a></li>
+   </ul>
+</nav>
+ <header>
+   <h1>Komeshu Imports</h1>
+   <h2>Fine Japnese Alcohol</h2>
+
+ </header>
+ <div class="nama">
+   <p>Nama Daiginjo <span class="price">$110</span><br /><small>A seasonal sake, limited from April to September. Delicate, fresh and fruity mouthfeel, the elegant aroma and gentle taste leave a great impression. </small></p>
+ </div>
+
+ <div class="junmai">
+   <p>Junmai Ginjo <span class="price">$120</span><br /><small>Its mild aroma comfortably expands, and the gently sweet mouthfeel shifts to a light acidic touch, with a mellow finish. Serve slightly chilled, at room temperature or slightly warmed.</small></p>
+ </div>
+
+ <div class="umeshu">
+   <p>Umeshu<span class="price">$70</span><br /><small>Umeshu is a traditional Japanese liqueur made from ume fruit. Refresh yourself by enjoying a glass of Umeshu when feeling tired.</small></p>
+ </div>
+
+ <script>
+   $('div').on('mouseenter', function() {
+     $(this).toggleClass('show-description');
+   });
+   $('div').on('mouseleave', function() {
+     $(this).toggleClass('show-description');
+   });
+ </script>
+
+</body>
